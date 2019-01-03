@@ -22,6 +22,7 @@ The goals / steps of this project are the following:
 [image2]: ./data/IMG/left_2016_12_01_13_30_48_287.jpg "Left Camera Image"
 [image3]: ./data/IMG/right_2016_12_01_13_30_48_287.jpg "Right Camera Image"
 [image4]: ./examples/figure_1.png "Loss Plot"
+[image5]: ./architecture.png "Model Architecture"
 
 
 ## Rubric Points
@@ -81,6 +82,7 @@ In the end, after training, when the model is saved, a plot is also depicted to 
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 101-113) consisted of multiple layers of convolution neural network.
+The final model architecture (model.py lines 101-113) consisted of multiple layers of convolution neural network.Below table explains sequential model with all involved layers along with their inputs.
+![Model Architecture][image5]
 
 
