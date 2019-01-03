@@ -76,3 +76,7 @@ Data set was spilt for test and validation using split method with factor of  0.
 #### 2. Final Model Architecture
 
 The final model architecture (model.py lines 101-113) consisted of multiple layers of convolution neural network.
+
+#### 3. Improvements Needed
+
+Vehicle fails to drive on bridge once it collide with the left railing of the bridge. There is need of correction in the model to rectify this. My guess is that this can be corrected by augmenting steering angle with different factors currently I have used 0.20 and 0.15 factors.
