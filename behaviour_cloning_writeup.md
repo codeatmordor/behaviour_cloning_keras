@@ -21,6 +21,8 @@ The goals / steps of this project are the following:
 [image1]: ./data/IMG/center_2016_12_01_13_30_48_287.jpg "Centre Camera Image"
 [image2]: ./data/IMG/left_2016_12_01_13_30_48_287.jpg "Left Camera Image"
 [image3]: ./data/IMG/right_2016_12_01_13_30_48_287.jpg "Right Camera Image"
+[image4]: ./examples/figure_1.png "Loss Plot"
+
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
@@ -68,15 +70,17 @@ Training data was chosen to keep the vehicle driving on the road. I used a combi
 
 #### 1. Solution Design Approach
 
-Data set was spilt for test and validation using split method with factor of  0.2. I used generator so that a part of training data images is operated upon at a given time. Training data set is approx 6700 images to train the model. Also, augmented all of the images in the training data. In the end, after training, when the model is saved, a plot is also depicted to show the training and validation losses. Steering corrections are also introduced alongwith appropriate camera images i.e. left, right and center camera images. At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road for most of the part.
+Data set was spilt for test and validation using split method with factor of  0.2. I used generator so that a part of training data images is operated upon at a given time. Training data set is approx 8000 images to train the model. Also, augmented all of the images in the training data.  Steering corrections are also introduced alongwith appropriate camera images i.e. left, right and center camera images. At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 ![Centre Camera Image][image1]
 ![Left Camera Image][image2]
 ![Right Camera Image][image3]
+
+In the end, after training, when the model is saved, a plot is also depicted to show the training and validation losses.
+![Losses Plot][image4]
+
 
 #### 2. Final Model Architecture
 
 The final model architecture (model.py lines 101-113) consisted of multiple layers of convolution neural network.
 
-#### 3. Improvements Needed
 
-Vehicle fails to drive on bridge once it collide with the left railing of the bridge. There is need of correction in the model to rectify this. My guess is that this can be corrected by augmenting steering angle with different factors currently I have used 0.20 and 0.15 factors.
